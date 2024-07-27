@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 02:04:05 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MTsyMDI0LTA3LTI3OyIxMjozMTo0MSAiOzMxMTQ="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MTsyMDI0LTA3LTI3OyIwMjowNDowNSAiOzI7MzIyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numusuario" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o primeiro n&#250;mero&quot;" newline="True"/>
+            <input variable="numusuario"/>
+            <if expression="numusuario%2=0">
+                <then>
+                    <output expression="numusuario&amp;&quot; &#233; par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="numusuario&amp;&quot; &#233; impar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

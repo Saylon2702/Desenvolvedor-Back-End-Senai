@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 02:50:09 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MTsyMDI0LTA3LTI3OyIwMjozNjo1MyAiOzMxMjE="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MTsyMDI0LTA3LTI3OyIwMjo1MDowOSAiOzE7MzIyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nota" type="Integer" array="False" size=""/>
+            <output expression="&quot;diga sua nota&quot;" newline="True"/>
+            <input variable="nota"/>
+            <if expression="nota&gt;=50">
+                <then>
+                    <output expression="&quot;Aprovado&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="nota=45">
+                        <then>
+                            <output expression="&quot;Conselho&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="nota=49">
+                                <then>
+                                    <output expression="&quot;Conselho&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="nota=48">
+                                        <then>
+                                            <output expression="&quot;conselho&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="nota=47">
+                                                <then>
+                                                    <output expression="&quot;conselho&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="nota=46">
+                                                        <then>
+                                                            <output expression="&quot;conselho&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="nota&lt;=44">
+                                                                <then>
+                                                                    <output expression="&quot;Reprovado&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Reprovado&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
