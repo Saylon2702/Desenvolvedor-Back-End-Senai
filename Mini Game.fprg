@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 02:30:48 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MTsyMDI0LTA4LTAzOyIxMTo0OTowNiAiOzMxMTg="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MTsyMDI0LTA4LTAzOyIwMjozMDo0OCAiOzM7MzIyNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="resposta" type="Integer" array="False" size=""/>
+            <assign variable="resposta" expression="7*56"/>
+            <assign variable="resposta" expression="10*7"/>
+            <assign variable="resposta" expression="23*4"/>
+            <assign variable="resposta" expression="210*2"/>
+            <assign variable="resposta" expression="12*3"/>
+            <output expression="&quot;Bem vindo ao GAME&quot;" newline="True"/>
+            <output expression="&quot;Qual seu nome&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;vamos comecar o jogo&quot;" newline="True"/>
+            <output expression="&quot;nivel 1&quot;" newline="True"/>
+            <output expression="&quot;7*56&quot;" newline="True"/>
+            <input variable="resposta"/>
+            <if expression="resposta=392">
+                <then>
+                    <output expression="&quot;Nivel 2&quot;" newline="True"/>
+                    <output expression="&quot;10*7&quot;" newline="True"/>
+                    <input variable="resposta"/>
+                    <if expression="resposta=70">
+                        <then>
+                            <output expression="&quot;Nivel 3&quot;" newline="True"/>
+                            <output expression="&quot;23*4&quot;" newline="True"/>
+                            <input variable="resposta"/>
+                            <if expression="resposta=92">
+                                <then>
+                                    <output expression="&quot;Nivel 4&quot;" newline="True"/>
+                                    <output expression="&quot;210*2&quot;" newline="True"/>
+                                    <input variable="resposta"/>
+                                    <if expression="resposta=420">
+                                        <then>
+                                            <output expression="&quot;Nivel 5&quot;" newline="True"/>
+                                            <output expression="&quot;12*3&quot;" newline="True"/>
+                                            <input variable="resposta"/>
+                                            <if expression="resposta=36">
+                                                <then>
+                                                    <output expression="&quot;PARAB&#201;NS VOC&#202; FINALIZOU O GAME&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Game Over&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Game Over&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Game Over&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Game Over&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Game Over&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
