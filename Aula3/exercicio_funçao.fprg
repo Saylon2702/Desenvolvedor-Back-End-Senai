@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 04:37:53 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1NTzVBRjdTOzIwMjQtMDgtMDM7IjAzOjEzOjE4ICI7MzQ1Nw=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1NTzVBRjdTOzIwMjQtMDgtMDM7IjA0OjM3OjUzICI7MTszNTcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, total" type="Real" array="False" size=""/>
+            <declare name="operacao, repetir" type="String" array="False" size=""/>
+            <do expression="repetir&lt;&gt;&quot; &quot;">
+                <output expression="&quot;Escreva os n&#250;meros da opera&#231;ao:&quot;" newline="True"/>
+                <input variable="num1"/>
+                <input variable="num2"/>
+                <output expression="&quot;Digite a opera&#231;ao desejada.&quot;" newline="True"/>
+                <input variable="operacao"/>
+                <assign variable="total" expression="escolheOperacao(operacao,num1,num2)"/>
+                <comment text="total recebera o valor de retorno da fun&#231;ao escolheOpera&#231;ao. Esta fun&#231;ao serve para o tratamento de opera&#231;oes incorretas digitadas pelo usuario."/>
+                <output expression="&quot;total:&quot;&amp;total" newline="True"/>
+                <output expression="&quot;Digite algo para continuar&quot;" newline="True"/>
+                <input variable="repetir"/>
+            </do>
+        </body>
+    </function>
+    <function name="divisao" type="Real" variable="total">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="num1/num2"/>
+        </body>
+    </function>
+    <function name="escolheOperacao" type="Real" variable="total">
+        <parameters>
+            <parameter name="operacao" type="String" array="False"/>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <while expression="operacao&lt;&gt;&quot;+&quot;and operacao&lt;&gt;&quot;-&quot;and operacao&lt;&gt;&quot;*&quot;and operacao&lt;&gt;&quot;/&quot;">
+                <comment text="Enquanto a opera&#231;ao for uma das opera&#231;oes permitidas o algoritmo ir&#225; pedir uma valida."/>
+                <output expression="&quot;Opera&#231;ao indisponivel, insira uma opera&#231;ao v&#225;lida (+ para soma; - para subtra&#231;ao; * para multiplica&#231;ao; / para divisao):&quot;" newline="True"/>
+                <input variable="operacao"/>
+            </while>
+            <if expression="operacao=&quot;+&quot;">
+                <then>
+                    <assign variable="total" expression="soma(num1,num2)"/>
+                </then>
+                <else>
+                    <if expression="operacao=&quot;-&quot;">
+                        <then>
+                            <assign variable="total" expression="subtracao(num1,num2)"/>
+                        </then>
+                        <else>
+                            <if expression="operacao=&quot;/&quot;">
+                                <then>
+                                    <assign variable="total" expression="divisao(num1,num2)"/>
+                                </then>
+                                <else>
+                                    <if expression="operacao=&quot;*&quot;">
+                                        <then>
+                                            <assign variable="total" expression="multiplicacao(num1,num2)"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="multiplicacao" type="Real" variable="total">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="num1*num2"/>
+        </body>
+    </function>
+    <function name="soma" type="Real" variable="total">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="num1+num2"/>
+        </body>
+    </function>
+    <function name="subtracao" type="Real" variable="total">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="num1-num2"/>
+        </body>
+    </function>
+</flowgorithm>
