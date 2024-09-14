@@ -1,0 +1,91 @@
+class Funcionario{
+    _nome
+    _cpf
+    _salario
+    _contaSalario
+
+    constructor(pNome, pCpf, pSalario, pContaSalario){
+        this._nome = pNome;
+        this._cpf = pCpf;
+        this._salario = pSalario;
+        this._contaSalario = pContaSalario;
+    }
+
+    receberSalario(){
+        this._contaSalario = this._contaSalario + this._salario;
+    }
+
+}
+
+class Gerente extends Funcionario {
+
+    _contaEmpresa
+
+    constructor(pNome, pCpf, pSalario, pContaSalario, pContaEmpresa) {
+        super(pNome, pCpf, pSalario, pContaSalario);
+        this._contaEmpresa = pContaEmpresa;
+    }
+
+    pagarSalario(salario){
+        this._contaEmpresa = this._contaEmpresa - salario;
+    }
+}
+
+let luciano = new Funcionario("luciano","123456789",5000,0);
+
+console.log(luciano);
+luciano.receberSalario();
+console.log(luciano);
+
+let caio = new Gerente("caio","987654321",7500,2500,15568);
+console.log(caio);
+caio.pagarSalario(luciano._salario);
+console.log(caio);
+
+caio.receberSalario();
+console.log(caio);
+
+let luana = new Gerente("luana","735205683",7500,7500,caio._contaEmpresa);
+luana.pagarSalario(caio._salario);
+console.log(luana);
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+const readline = require('readline_sync')
+
+_marca 
+_ano
+_modelo
+_cor
+_numeroDePortas
+
+    constructor(pCarro, pMoto){
+        this._carro = pCarro
+        this._moto = pMoto
+    }
+
+    class Carro extends veiculos {
+
+    }
+    marca(){
+        this._carro = this._carro + this._marca;
+        this._moto = this._moto + this._marca;
+    }
+    ano(){
+        this._carro = this._carro + this._ano;
+        this._moto = this._moto + this._ano;
+    }
+    modelo(){
+        this._carro = this._carro + this._modelo;
+        this._moto = this._moto + this._modelo;
+    }
+    cor(){
+        this._carro = this._carro + this._cor;
+        this._moto = this._moto + this._cor;
+    }
+    numerodePortas(){
+        this._carro = this._carro + this._numeroDePortas;
+        this._moto = this._moto + this._numeroDePortas;
+    }
